@@ -1,10 +1,10 @@
 [
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Yo bruha",
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
     "section": "",
-    "text": "Week4Tut\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
   },
   {
     "objectID": "posts/hot-ones-post/index.html",
@@ -35,13 +35,6 @@
     "text": "Exercise 2: Can we believe what we see?\n\nThis question uses material from this week’s lecture, from a few hours ago.\nIn the previous question we made subjective statements about the residual plot to determine if the model was a good fit or not. We’ll use randomisation to check any observations we made from the residual plot. The code below makes a lineup of the true plot against plots made with rotation residuals (nulls/good). When you run the code you will get a line decrypt(“….”), which you can copy and paste back in to the console window to get the location of the true plot (in case you forgot which it is). Does the true plot look like the null plots? If not, describe how it differs.\n\nlibrary(nullabor)\n\npenguins_m &lt;- augment(penguins_fit)\n\nggplot(lineup(null_lm(body_mass_g~flipper_length_mm, method=\"rotate\"),\n              penguins_m),\n       aes(x=flipper_length_mm, y=.resid)) +\n  geom_point() +\n  facet_wrap(~.sample, ncol=5) +\n  theme_void() +\n  theme(axis.text = element_blank(), \n        panel.border = element_rect(fill=NA, colour=\"black\"))\n\ndecrypt(\"HQS5 gplp xB zhVxlxhB td\")\n\n\n\n\n\n\nI would not be able to discern the true plot in this lineup. The differnce in interaction terms should be accounted for when formulating models."
   },
   {
-    "objectID": "posts/post-with-code/index.html",
-    "href": "posts/post-with-code/index.html",
-    "title": "Post With Code",
-    "section": "",
-    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
-  },
-  {
     "objectID": "about.html",
     "href": "about.html",
     "title": "About",
@@ -49,10 +42,17 @@
     "text": "About this blog"
   },
   {
-    "objectID": "posts/welcome/index.html",
-    "href": "posts/welcome/index.html",
-    "title": "Welcome To My Blog",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yo bruha",
     "section": "",
-    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+    "text": "Week4Tut\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
   }
 ]
