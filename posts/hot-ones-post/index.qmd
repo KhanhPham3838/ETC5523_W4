@@ -1,0 +1,120 @@
+---
+title: "Week4Tut"
+format: html
+editor: visual
+---
+
+## Quarto
+
+```{r}
+library(tidyverse)
+library(palmerpenguins)
+
+glimpse(penguins)
+```
+
+## Exercise 1: IDA on penguins data
+
+-   Take a glimpse of the penguins data. What types are variables are present in the data? library(palmerpenguins)
+
+```{r}
+tempt <- penguins
+```
+
+*species*, *island*. *sex* : factorial *bill_length_mm*, *bill_depth_mm*: double *flipper_length_mm*, *body_mass_g*, *year*: integers
+
+-   How was this data collected? You will need to read the documentation for the palmerpenguins package.
+
+> <https://allisonhorst.github.io/palmerpenguins/> In the data citation section
+
+Using the visdat package make an overview plot to examine types of variables and for missing values.
+
+```{r}
+library(visdat)
+vis_dat(tempt)
+vis_miss(tempt, cluster = T, sort_miss = T)
+```
+
+> We can see that there are alot of missing genders for penguins which can because they are hard to determine by sight alone. Some with missing sex are also missing in measurements.
+
+-   Check the distributions of each species on each of the size variables, using a jittered dotplot, using the geom_quasirandom() function in the ggbeeswarm package. There seems to be some bimodality in some species on some variables eg bill_length_mm. Why do you think this might be? Check your thinking by making a suitable plot.
+
+```{r}
+library(ggbeeswarm)
+tempt %>%
+  ggplot2::ggplot(aes(y = bill_length_mm, x = species, color = sex)) +
+  geom_quasirandom()
+```
+
+> Modality is detected for the bill length measurements. This is because males and females will have their own normal distribution according to their sexes. There seem to be right skewed slightly for all species.
+
+Is there any indication of outliers from the jittered dotplots of different variables?
+
+```{r}
+tempt %>%
+  ggplot2::ggplot(aes(y = body_mass_g, x = species, color = sex)) +
+  geom_quasirandom() +
+  coord_flip()
+```
+
+Make a scatterplot of body_mass_g vs flipper_length_mm for all the penguins. What do the vertical stripes indicate? Are there any other unusual patterns to note, such as outliers or clustering or nonlinearity?
+
+```{r}
+tempt %>%
+  ggplot(aes(flipper_length_mm, body_mass_g)) +
+  geom_point(aes(col = sex))
+```
+
+> the rounding of data will causes some vertical/horizontal lines of certain variables. For example, it may have been rounded to the nearest mm for flipper length mm variable.
+
+How well can penguin body mass be predicted based on the flipper length? Fit a linear model to check. Report the equation, the , , and make a residual plot of residuals vs flipper_length_mm. From the residual plot, are there any concerns about the model fit?
+
+```{r}
+library(broom)
+penguins_nona <- tempt %>%
+  na.omit()
+
+penguins_fit <- lm(body_mass_g ~ flipper_length_mm, data = penguins_nona)
+
+tidy(penguins_fit)
+```
+
+> Interpetation: for each 1g body mass bigger, a penguin will increase its flipper length by 50.15327, ceteri paribus. body mass = -5872 + 50.1532 \* flipper length +- 770.868
+
+```{r}
+glance(penguins_fit)
+
+# for example if a penguin is 200mm fliiper length
+
+fl <- 200
+-5872 + 50.153 * fl
+
+# confidence interval = mean + tcrit * sd
+
+1.96 * (393.3)
+```
+
+> the R squared indicates that the flipper length explains 76% of variations in the body mass data. the sigma means that the residual standard deviation.
+
+## Exercise 2: Can we believe what we see?
+
+### This question uses material from this week's lecture, from a few hours ago.
+
+In the previous question we made subjective statements about the residual plot to determine if the model was a good fit or not. We'll use randomisation to check any observations we made from the residual plot. The code below makes a lineup of the true plot against plots made with rotation residuals (nulls/good). When you run the code you will get a line decrypt("...."), which you can copy and paste back in to the console window to get the location of the true plot (in case you forgot which it is). Does the true plot look like the null plots? If not, describe how it differs.
+
+```{r}
+library(nullabor)
+
+penguins_m <- augment(penguins_fit)
+
+ggplot(lineup(null_lm(body_mass_g~flipper_length_mm, method="rotate"),
+              penguins_m),
+       aes(x=flipper_length_mm, y=.resid)) +
+  geom_point() +
+  facet_wrap(~.sample, ncol=5) +
+  theme_void() +
+  theme(axis.text = element_blank(), 
+        panel.border = element_rect(fill=NA, colour="black"))
+```
+
+> I would not be able to discern the true plot in this lineup. The differnce in interaction terms should be accounted for when formulating models.

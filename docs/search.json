@@ -1,0 +1,58 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Yo bruha",
+    "section": "",
+    "text": "Week4Tut\n\n\n\n\n\n\n\n\n\n\n \n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nAug 17, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nAug 14, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/hot-ones-post/index.html",
+    "href": "posts/hot-ones-post/index.html",
+    "title": "Week4Tut",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "posts/hot-ones-post/index.html#quarto",
+    "href": "posts/hot-ones-post/index.html#quarto",
+    "title": "Week4Tut",
+    "section": "",
+    "text": "library(tidyverse)\n\n── Attaching core tidyverse packages ──────────────────────── tidyverse 2.0.0 ──\n✔ dplyr     1.1.2     ✔ readr     2.1.4\n✔ forcats   1.0.0     ✔ stringr   1.5.0\n✔ ggplot2   3.4.3     ✔ tibble    3.2.1\n✔ lubridate 1.9.2     ✔ tidyr     1.3.0\n✔ purrr     1.0.2     \n── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──\n✖ dplyr::filter() masks stats::filter()\n✖ dplyr::lag()    masks stats::lag()\nℹ Use the conflicted package (&lt;http://conflicted.r-lib.org/&gt;) to force all conflicts to become errors\n\nlibrary(palmerpenguins)\n\nglimpse(penguins)\n\nRows: 344\nColumns: 8\n$ species           &lt;fct&gt; Adelie, Adelie, Adelie, Adelie, Adelie, Adelie, Adel…\n$ island            &lt;fct&gt; Torgersen, Torgersen, Torgersen, Torgersen, Torgerse…\n$ bill_length_mm    &lt;dbl&gt; 39.1, 39.5, 40.3, NA, 36.7, 39.3, 38.9, 39.2, 34.1, …\n$ bill_depth_mm     &lt;dbl&gt; 18.7, 17.4, 18.0, NA, 19.3, 20.6, 17.8, 19.6, 18.1, …\n$ flipper_length_mm &lt;int&gt; 181, 186, 195, NA, 193, 190, 181, 195, 193, 190, 186…\n$ body_mass_g       &lt;int&gt; 3750, 3800, 3250, NA, 3450, 3650, 3625, 4675, 3475, …\n$ sex               &lt;fct&gt; male, female, female, NA, female, male, female, male…\n$ year              &lt;int&gt; 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007, 2007…"
+  },
+  {
+    "objectID": "posts/hot-ones-post/index.html#exercise-1-ida-on-penguins-data",
+    "href": "posts/hot-ones-post/index.html#exercise-1-ida-on-penguins-data",
+    "title": "Week4Tut",
+    "section": "Exercise 1: IDA on penguins data",
+    "text": "Exercise 1: IDA on penguins data\n\nTake a glimpse of the penguins data. What types are variables are present in the data? library(palmerpenguins)\n\n\ntempt &lt;- penguins\n\nspecies, island. sex : factorial bill_length_mm, bill_depth_mm: double flipper_length_mm, body_mass_g, year: integers\n\nHow was this data collected? You will need to read the documentation for the palmerpenguins package.\n\n\nhttps://allisonhorst.github.io/palmerpenguins/ In the data citation section\n\nUsing the visdat package make an overview plot to examine types of variables and for missing values.\n\nlibrary(visdat)\nvis_dat(tempt)\n\n\n\nvis_miss(tempt, cluster = T, sort_miss = T)\n\n\n\n\n\nWe can see that there are alot of missing genders for penguins which can because they are hard to determine by sight alone. Some with missing sex are also missing in measurements.\n\n\nCheck the distributions of each species on each of the size variables, using a jittered dotplot, using the geom_quasirandom() function in the ggbeeswarm package. There seems to be some bimodality in some species on some variables eg bill_length_mm. Why do you think this might be? Check your thinking by making a suitable plot.\n\n\nlibrary(ggbeeswarm)\ntempt %&gt;%\n  ggplot2::ggplot(aes(y = bill_length_mm, x = species, color = sex)) +\n  geom_quasirandom()\n\nWarning: Removed 2 rows containing missing values (`position_quasirandom()`).\n\n\n\n\n\n\nModality is detected for the bill length measurements. This is because males and females will have their own normal distribution according to their sexes. There seem to be right skewed slightly for all species.\n\nIs there any indication of outliers from the jittered dotplots of different variables?\n\ntempt %&gt;%\n  ggplot2::ggplot(aes(y = body_mass_g, x = species, color = sex)) +\n  geom_quasirandom() +\n  coord_flip()\n\nWarning: Removed 2 rows containing missing values (`position_quasirandom()`).\n\n\n\n\n\nMake a scatterplot of body_mass_g vs flipper_length_mm for all the penguins. What do the vertical stripes indicate? Are there any other unusual patterns to note, such as outliers or clustering or nonlinearity?\n\ntempt %&gt;%\n  ggplot(aes(flipper_length_mm, body_mass_g)) +\n  geom_point(aes(col = sex))\n\nWarning: Removed 2 rows containing missing values (`geom_point()`).\n\n\n\n\n\n\nthe rounding of data will causes some vertical/horizontal lines of certain variables. For example, it may have been rounded to the nearest mm for flipper length mm variable.\n\nHow well can penguin body mass be predicted based on the flipper length? Fit a linear model to check. Report the equation, the , , and make a residual plot of residuals vs flipper_length_mm. From the residual plot, are there any concerns about the model fit?\n\nlibrary(broom)\npenguins_nona &lt;- tempt %&gt;%\n  na.omit()\n\npenguins_fit &lt;- lm(body_mass_g ~ flipper_length_mm, data = penguins_nona)\n\ntidy(penguins_fit)\n\n# A tibble: 2 × 5\n  term              estimate std.error statistic   p.value\n  &lt;chr&gt;                &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt;\n1 (Intercept)        -5872.     310.       -18.9 1.18e- 54\n2 flipper_length_mm     50.2      1.54      32.6 3.13e-105\n\n\n\nInterpetation: for each 1g body mass bigger, a penguin will increase its flipper length by 50.15327, ceteri paribus. body mass = -5872 + 50.1532 * flipper length +- 770.868\n\n\nglance(penguins_fit)\n\n# A tibble: 1 × 12\n  r.squared adj.r.squared sigma statistic   p.value    df logLik   AIC   BIC\n      &lt;dbl&gt;         &lt;dbl&gt; &lt;dbl&gt;     &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;  &lt;dbl&gt; &lt;dbl&gt; &lt;dbl&gt;\n1     0.762         0.761  393.     1060. 3.13e-105     1 -2461. 4928. 4940.\n# ℹ 3 more variables: deviance &lt;dbl&gt;, df.residual &lt;int&gt;, nobs &lt;int&gt;\n\n# for example if a penguin is 200mm fliiper length\n\nfl &lt;- 200\n-5872 + 50.153 * fl\n\n[1] 4158.6\n\n# confidence interval = mean + tcrit * sd\n\n1.96 * (393.3)\n\n[1] 770.868\n\n\n\nthe R squared indicates that the flipper length explains 76% of variations in the body mass data. the sigma means that the residual standard deviation."
+  },
+  {
+    "objectID": "posts/hot-ones-post/index.html#exercise-2-can-we-believe-what-we-see",
+    "href": "posts/hot-ones-post/index.html#exercise-2-can-we-believe-what-we-see",
+    "title": "Week4Tut",
+    "section": "Exercise 2: Can we believe what we see?",
+    "text": "Exercise 2: Can we believe what we see?\n\nThis question uses material from this week’s lecture, from a few hours ago.\nIn the previous question we made subjective statements about the residual plot to determine if the model was a good fit or not. We’ll use randomisation to check any observations we made from the residual plot. The code below makes a lineup of the true plot against plots made with rotation residuals (nulls/good). When you run the code you will get a line decrypt(“….”), which you can copy and paste back in to the console window to get the location of the true plot (in case you forgot which it is). Does the true plot look like the null plots? If not, describe how it differs.\n\nlibrary(nullabor)\n\npenguins_m &lt;- augment(penguins_fit)\n\nggplot(lineup(null_lm(body_mass_g~flipper_length_mm, method=\"rotate\"),\n              penguins_m),\n       aes(x=flipper_length_mm, y=.resid)) +\n  geom_point() +\n  facet_wrap(~.sample, ncol=5) +\n  theme_void() +\n  theme(axis.text = element_blank(), \n        panel.border = element_rect(fill=NA, colour=\"black\"))\n\ndecrypt(\"HQS5 gplp xB zhVxlxhB td\")\n\n\n\n\n\n\nI would not be able to discern the true plot in this lineup. The differnce in interaction terms should be accounted for when formulating models."
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code.\n\n1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "About this blog"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  }
+]
