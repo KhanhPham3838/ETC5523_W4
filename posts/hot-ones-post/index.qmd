@@ -6,6 +6,8 @@ categories: [news, code, analysis]
 image: image.jpg
 ---
 
+This is a post about penguin
+
 ## Quarto
 
 ```{r}
